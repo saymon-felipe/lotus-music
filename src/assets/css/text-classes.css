@@ -1,0 +1,31 @@
+.fontsize-4xl {
+  font-size: var(--fontsize-4xl);
+}
+
+.fontsize-2xl {
+  font-size: var(--fontsize-2xl);
+}
+
+.fontsize-xl {
+  font-size: var(--fontsize-xl);
+}
+
+.fontsize-lg {
+  font-size: var(--fontsize-lg);
+}
+
+.fontsize-md {
+  font-size: var(--fontsize-md);
+}
+
+.fontsize-sm {
+  font-size: var(--fontsize-sm);
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.font-medium {
+  font-weight: 600;
+}

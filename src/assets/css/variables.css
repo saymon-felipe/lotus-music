@@ -1,0 +1,48 @@
+:root {
+    --black: #0A100D;
+    --black-2: #0E1A14;
+    --yellow: #EABD35;
+    --yellow-2: #FDD762;
+    --yellow-3: #FFECB3;
+
+    --gradient-default: linear-gradient(to right, var(--yellow), var(--yellow-2));
+
+    /* BORDER RADIUS */
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 18px;
+    --radius-full: 50%;
+
+    /* SPACING */
+    --space-1: 1px;
+    --space-2: 4px;
+    --space-3: 8px;
+    --space-4: 12px;
+    --space-5: 16px;
+    --space-6: 20px;
+    --space-7: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+    --space-16: 64px;
+    --space-20: 80px;
+
+    /* FONTSIZE */
+    --fontsize-4xl: 64px;
+    --fontsize-2xl: 48px;
+    --fontsize-xl: 34px;
+    --fontsize-lg: 24px;
+    --fontsize-md: 16px;
+    --fontsize-sm: 12px;
+
+    /* BOX SHADOW */
+    --boxshadow-default: 0 0 15px rgba(0, 0, 0, 0.2);
+
+    /* BREAKPOINTS */
+    --small-device: 960px;
+    --tablet: 768px;
+    --mobile: 480px;
+
+    /* OVERLAY */
+    --overlay: rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,21 @@
+@import url('./variables.css');
+@import url('./text-classes.css');
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    src: url(../fonts/Montserrat.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100dvw;
+    height: 100dvh;
+    overflow: hidden;
+    background: linear-gradient(to top left, var(--black), var(--black-2));
+}
