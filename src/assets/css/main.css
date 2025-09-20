@@ -2,20 +2,243 @@
 @import url('./text-classes.css');
 
 @font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    src: url(../fonts/Montserrat.ttf);
+  font-family: 'Montserrat';
+  font-style: normal;
+  src: url(../fonts/Montserrat.ttf);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {
-    width: 100dvw;
-    height: 100dvh;
-    overflow: hidden;
-    background: linear-gradient(to top left, var(--black), var(--black-2));
+html,
+body {
+  width: 100dvw;
+  height: 100dvh;
+  overflow-x: hidden;
+  background: linear-gradient(to top left, var(--black), var(--black-2));
+  font-family: 'Montserrat';
+}
+
+body {
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  color: var(--yellow-3);
+  font-size: var(--fontsize-md);
+}
+
+.container {
+  width: 100%;
+  max-width: 100dvw;
+  padding-right: var(--space-4);
+  padding-left: var(--space-4);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  line-height: 130%;
+}
+
+h1 {
+  font-size: var(--fontsize-4xl);
+  font-weight: bold;
+}
+
+h4 {
+  font-size: var(--fontsize-lg);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: var(--fontsize-2xl);
+  }
+
+  h4 {
+    font-size: var(--fontsize-md);
+  }
+}
+
+.prevent-flicker {
+  visibility: hidden;
+}
+
+.btn {
+  width: fit-content;
+  height: fit-content;
+  font-size: var(--fontsize-md);
+  border: none;
+  background: none;
+  padding: var(--space-4) var(--space-6);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  cursor: pointer;
+  color: var(--black);
+  transition: all 0.4s ease-in-out;
+  text-shadow: 0.4px 0.4px 0px var(--black);
+  transform: translateY(0);
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.btn-primary {
+  background: var(--gradient-default);
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+}
+
+.btn-primary-alt {
+  color: var(--yellow-2);
+  border: 1px solid var(--yellow-2);
+}
+
+.informative-button {
+  background: linear-gradient(to top left, var(--black), var(--black-2));
+  border: 1px solid var(--border-low);
+  border-radius: 60px;
+  padding: var(--space-3) var(--space-6);
+  color: var(--yellow-2);
+}
+
+@media (max-width: 768px) {
+  .informative-button,
+  .btn {
+    font-size: var(--fontsize-sm);
+    text-shadow: none;
+  }
+}
+
+.highlight {
+  background-image: var(--gradient-default);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-padding: var(--space-3);
+  height: calc(100dvh - 105.36px);
+  display: grid;
+  place-items: center;
+}
+
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.attention {
+  animation: attention 4s ease-in-out infinite;
+}
+
+@keyframes attention {
+  0% {
+    transform: translateY(0);
+  }
+
+  5% {
+    transform: translateY(-5px);
+  }
+
+  10% {
+    transform: translateY(0);
+  }
+
+  15% {
+    transform: translateY(-5px);
+  }
+
+  20% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.signature {
+  position: absolute;
+  bottom: 0;
+  padding: var(--space-6);
+  text-align: center;
+  display: grid;
+  place-items: center;
+  gap: var(--space-3);
+
+  & span {
+    font-size: 12px !important;
+    display: inline-block;
+  }
+
+  & a {
+    color: var(--yellow-3);
+  }
+}
+
+/* --- Breakpoints Responsivos --- */
+
+/* Telas Small (sm) e maiores (≥576px) */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+/* Telas Medium (md) e maiores (≥768px) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* Telas Large (lg) e maiores (≥992px) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Telas Extra Large (xl) e maiores (≥1200px) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Telas Extra Extra Large (xxl) e maiores (≥1400px) */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
 }
