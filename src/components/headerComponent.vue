@@ -69,8 +69,6 @@ export default {
       if (this.isMobile() && this.showResponsiveHeader) {
         this.showResponsiveHeader = !this.showResponsiveHeader
       }
-
-      //window.history.pushState(null, '', window.location.href)
     },
   },
   mounted() {
@@ -91,6 +89,7 @@ export default {
 <style scoped>
 header {
   border-bottom: 1px solid #2f4e3f;
+  background: linear-gradient(to top left, var(--black), var(--black-2));
   position: relative;
   height: 86.36px;
   position: sticky;
@@ -98,7 +97,7 @@ header {
   left: 0;
   width: 100dvw;
   padding-bottom: 1px;
-  z-index: 2;
+  z-index: 3 !important;
 
   & .container {
     display: flex;
@@ -222,7 +221,7 @@ header {
     padding: var(--space-6);
     border-left: 1px solid #2f4e3f;
     transition: all 0.4s ease-in-out;
-    transform: translateX(40dvw);
+    transform: translateX(100dvw);
     opacity: 0;
     background: linear-gradient(to top left, var(--black), var(--black-2));
     z-index: 999;

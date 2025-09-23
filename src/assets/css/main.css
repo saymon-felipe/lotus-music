@@ -157,6 +157,21 @@ section {
   }
 }
 
+.animated-show {
+  opacity: 0;
+  animation: animated-show 1s ease-in-out forwards 0.4s;
+}
+
+@keyframes animated-show {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .attention {
   animation: attention 4s ease-in-out infinite;
 }
