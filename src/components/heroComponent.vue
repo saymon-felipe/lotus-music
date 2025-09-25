@@ -54,12 +54,9 @@ export default {}
 <style scoped>
 #inicio {
   & .container {
-    text-align: center;
-    display: grid;
-    place-items: center;
-    gap: var(--space-12);
-    padding: var(--space-6);
     max-width: 860px;
+    text-align: center;
+    padding-bottom: var(--space-12);
 
     & h1 {
       max-width: 699px;
@@ -121,14 +118,14 @@ export default {}
   .hero-metrics {
     gap: 0 !important;
 
-    & svg,
+    /*& svg,
     & p {
       font-size: var(--fontsize-md) !important;
     }
 
     & span {
       font-size: var(--fontsize-sm) !important;
-    }
+    }*/
   }
 }
 </style>

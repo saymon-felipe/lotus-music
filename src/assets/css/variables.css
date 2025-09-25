@@ -29,13 +29,15 @@
   --space-16: 64px;
   --space-20: 80px;
 
+  font-size: 16px;
+
   /* FONTSIZE */
-  --fontsize-4xl: 64px;
-  --fontsize-2xl: 48px;
-  --fontsize-xl: 34px;
-  --fontsize-lg: 24px;
-  --fontsize-md: 16px;
-  --fontsize-sm: 12px;
+  --fontsize-4xl: 4rem; /* 64px */
+  --fontsize-2xl: 3rem; /* 48px */
+  --fontsize-xl: 2.125rem; /* 34px */
+  --fontsize-lg: 1.5rem; /* 24px */
+  --fontsize-md: 1rem; /* 16px */
+  --fontsize-sm: 0.75rem; /* 12px */
 
   /* BOX SHADOW */
   --boxshadow-default: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -47,4 +49,10 @@
 
   /* OVERLAY */
   --overlay: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 80%;
+  }
 }

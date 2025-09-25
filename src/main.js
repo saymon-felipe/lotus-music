@@ -16,9 +16,51 @@ import {
   faStar,
   faCalendar,
   faPlay,
+  faMedal,
+  faClock,
+  faCheck,
+  faBookOpen,
+  faCircleCheck,
+  faUser,
+  faLocationDot,
+  faDesktop,
+  faIdCard,
+  faMagnifyingGlassChart,
+  faComments,
+  faDoorOpen,
+  faPhone,
+  faEnvelope,
 } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faBars, faMusic, faUsers, faGraduationCap, faDollarSign, faStar, faCalendar, faPlay)
+import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons'
+
+library.add(
+  faBars,
+  faMusic,
+  faUsers,
+  faGraduationCap,
+  faDollarSign,
+  faStar,
+  faCalendar,
+  faPlay,
+  faMedal,
+  faClock,
+  faCheck,
+  faBookOpen,
+  faCircleCheck,
+  faUser,
+  faLocationDot,
+  faDesktop,
+  faIdCard,
+  faMagnifyingGlassChart,
+  faComments,
+  faDoorOpen,
+  faFacebook,
+  faInstagram,
+  faYoutube,
+  faPhone,
+  faEnvelope,
+)
 
 const app = createApp(App).component('font-awesome-icon', FontAwesomeIcon)
 

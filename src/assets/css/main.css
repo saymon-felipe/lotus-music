@@ -11,20 +11,43 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: var(--yellow-2) var(--black);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--yellow-2);
+  border-radius: 10px;
+  border: 3px solid var(--yellow-2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--yellow);
 }
 
 html,
 body {
   width: 100dvw;
   height: 100dvh;
-  overflow-x: hidden;
-  background: linear-gradient(to top left, var(--black), var(--black-2));
+  overflow: hidden;
   font-family: 'Montserrat';
+  background: linear-gradient(to top left, var(--black), var(--black-2));
 }
 
-body {
+main {
+  height: calc(100dvh - 85.36px);
   overflow-y: auto;
-  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+  /*scroll-snap-type: y mandatory;*/
+  scroll-behavior: smooth;
   color: var(--yellow-3);
   font-size: var(--fontsize-md);
 }
@@ -32,10 +55,15 @@ body {
 .container {
   width: 100%;
   max-width: 100dvw;
+  height: 100%;
   padding-right: var(--space-4);
   padding-left: var(--space-4);
   margin-right: auto;
   margin-left: auto;
+  display: grid;
+  place-items: center;
+  gap: var(--space-12);
+  padding-bottom: 10%;
 }
 
 h1,
@@ -83,6 +111,7 @@ h4 {
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--space-3);
   cursor: pointer;
   color: var(--black);
@@ -116,27 +145,91 @@ h4 {
   color: var(--yellow-2);
 }
 
+form {
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   .informative-button,
   .btn {
-    font-size: var(--fontsize-sm);
     text-shadow: none;
+  }
+
+  .form-group {
+    flex-direction: column;
+
+    & input,
+    & button {
+      min-width: 100%;
+      width: 100%;
+    }
+  }
+}
+
+input {
+  border: 1px solid rgba(253, 215, 98, 0.1);
+  padding: var(--space-3) var(--space-6);
+  width: 100%;
+  background: transparent;
+  font-size: var(--fontsize-md);
+  color: var(--yellow-3);
+  height: 42px;
+  border-radius: var(--radius-md);
+  min-width: 200px;
+
+  &::placeholder {
+    color: rgba(255, 236, 179, 0.7);
+  }
+
+  &:focus {
+    outline: 2px solid var(--yellow-2);
   }
 }
 
 .highlight {
-  background-image: var(--gradient-default);
+  background-image: 
+    /* Camada de cima: O brilho inclinado */
+    linear-gradient(
+      -60deg,
+      /* A inclinação da faixa de brilho */ transparent 30%,
+      rgba(255, 255, 255, 0.4) 50%,
+      /* Cor e opacidade do brilho - ajuste se quiser */ transparent 70%
+    ),
+    var(--gradient-default);
+
+  /* 2. Aumentamos o tamanho do background para que o brilho possa se mover através do texto. */
+  background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+
+  animation: shine 4s linear infinite;
+}
+
+@keyframes shine {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
 }
 
 section {
   scroll-snap-align: start;
-  scroll-padding: var(--space-3);
-  height: calc(100dvh - 105.36px);
-  display: grid;
-  place-items: center;
+  padding-top: 105.36px !important;
+  min-height: calc(100dvh - 105.36px);
+  height: fit-content;
+  width: 100%;
+  gap: var(--space-6);
+  padding: var(--space-12) var(--space-6);
 }
 
 .float {
@@ -221,6 +314,155 @@ section {
   }
 }
 
+.section-title {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: var(--space-6);
+  width: 100%;
+  max-width: 700px;
+
+  & h2 {
+    font-size: var(--fontsize-xl);
+    font-weight: bold;
+  }
+
+  & p {
+    font-size: var(--fontsize-md);
+  }
+}
+
+.section-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  width: 100%;
+}
+
+.card {
+  background-image: linear-gradient(to right, var(--black), var(--black-2));
+  display: grid;
+  gap: var(--space-6);
+  padding: var(--space-6);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 236, 179, 0.1);
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+
+  &.big {
+    max-width: 1200px;
+
+    & .card-title {
+      background-image: var(--gradient-default);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: bold;
+      font-size: var(--fontsize-lg);
+      text-align: center;
+      margin-bottom: var(--space-6);
+    }
+  }
+
+  &.recommended {
+    &::after {
+      content: attr(data-title);
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -12px;
+      margin: auto;
+      padding: var(--space-2) var(--space-4);
+      border-radius: var(--radius-md);
+      background: var(--gradient-default);
+      display: grid;
+      place-items: center;
+      width: fit-content;
+      font-size: var(--fontsize-sm);
+      color: var(--black);
+    }
+  }
+
+  &.vertical {
+    place-items: center;
+    gap: var(--space-8);
+
+    & .card-header {
+      flex-direction: column;
+      text-align: center;
+      gap: var(--space-3);
+    }
+
+    & ul {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  & button {
+    width: 100%;
+  }
+
+  &.emphasis {
+    border-color: rgba(255, 236, 179, 0.3);
+    box-shadow: 0 0 50px rgba(255, 236, 179, 0.1);
+  }
+
+  & ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+
+    & li {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+
+    & span {
+      display: inline-block;
+    }
+
+    & svg {
+      color: var(--yellow-2);
+    }
+  }
+
+  & .card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-6);
+
+    & p {
+      font-size: var(--fontsize-lg);
+      font-weight: bold;
+    }
+  }
+
+  & > p {
+    font-size: var(--fontsize-md);
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  & .card-icon {
+    font-size: 1.5rem;
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 50px;
+    max-height: 50px;
+    background: rgba(253, 215, 98, 0.1);
+    border-radius: var(--radius-sm);
+    color: var(--yellow-2);
+  }
+}
+
 /* --- Breakpoints Responsivos --- */
 
 /* Telas Small (sm) e maiores (≥576px) */
@@ -234,6 +476,10 @@ section {
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
+  }
+
+  .card ul {
+    grid-template-columns: 1fr 1fr;
   }
 }
 

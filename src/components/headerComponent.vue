@@ -92,7 +92,7 @@ header {
   background: linear-gradient(to top left, var(--black), var(--black-2));
   position: relative;
   height: 86.36px;
-  position: sticky;
+  position: sticky !important;
   top: 0;
   left: 0;
   width: 100dvw;
