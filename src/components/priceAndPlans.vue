@@ -95,4 +95,10 @@ export default {}
 .card {
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .card {
+    text-align: left;
+  }
+}
 </style>
