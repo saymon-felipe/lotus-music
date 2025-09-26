@@ -3,7 +3,7 @@
     <div class="container">
       <div
         class="section-title"
-        v-scroll-reveal="{ delay: 400, origin: 'bottom', container: 'main' }"
+        v-scroll-reveal="{ delay: 200, origin: 'bottom', container: 'main' }"
       >
         <h2>Por que escolher a <span class="highlight">Lótus Music?</span></h2>
         <p>
@@ -13,7 +13,7 @@
       </div>
       <div
         class="section-container"
-        v-scroll-reveal="{ delay: 700, origin: 'bottom', container: 'main' }"
+        v-scroll-reveal="{ delay: 500, origin: 'bottom', container: 'main' }"
       >
         <div class="card">
           <div class="card-header">
@@ -65,7 +65,7 @@
       </div>
       <div
         class="card emphasis big"
-        v-scroll-reveal="{ delay: 400, origin: 'bottom', container: 'main' }"
+        v-scroll-reveal="{ delay: 200, origin: 'bottom', container: 'main' }"
       >
         <p class="card-title highlight">Benefícios Exclusivos</p>
         <ul>

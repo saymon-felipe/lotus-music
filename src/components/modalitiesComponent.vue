@@ -3,14 +3,14 @@
     <div class="container">
       <div
         class="section-title"
-        v-scroll-reveal="{ delay: 400, origin: 'bottom', container: 'main' }"
+        v-scroll-reveal="{ delay: 200, origin: 'bottom', container: 'main' }"
       >
         <h2>Modalidades de Ensino</h2>
         <p>Escolha a modalidade que melhor se adapta ao seu estilo de vida e objetivos musicais.</p>
       </div>
       <div
         class="section-container"
-        v-scroll-reveal="{ delay: 700, origin: 'bottom', container: 'main' }"
+        v-scroll-reveal="{ delay: 500, origin: 'bottom', container: 'main' }"
       >
         <div class="card vertical">
           <div class="card-header">

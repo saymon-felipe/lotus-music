@@ -3,7 +3,7 @@
     <div class="container">
       <div
         class="section-title"
-        v-scroll-reveal="{ delay: 400, origin: 'bottom', container: 'main' }"
+        v-scroll-reveal="{ delay: 200, origin: 'bottom', container: 'main' }"
       >
         <h2>
           Caminho da Excelência: <br />
@@ -12,7 +12,7 @@
       </div>
       <div
         class="section-container"
-        v-scroll-reveal="{ delay: 700, origin: 'bottom', container: 'main' }"
+        v-scroll-reveal="{ delay: 500, origin: 'bottom', container: 'main' }"
       >
         <div class="requirements">
           <div class="title">
