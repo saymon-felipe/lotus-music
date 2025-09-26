@@ -4,13 +4,13 @@
       <div class="hero-texts float">
         <h1
           class="prevent-flicker"
-          v-scroll-reveal="{ delay: 500, origin: 'bottom', container: 'main' }"
+          v-scroll-reveal="{ delay: 200, origin: 'bottom', container: 'main' }"
         >
           Desperte seu <span class="highlight">Talento Musical</span>
         </h1>
         <h4
           class="prevent-flicker"
-          v-scroll-reveal="{ delay: 600, origin: 'bottom', container: 'main' }"
+          v-scroll-reveal="{ delay: 300, origin: 'bottom', container: 'main' }"
         >
           Na Lótus Music, transformamos paixão em técnica através de aulas presenciais e remotas,
           individuais ou em grupo, com os melhores professores.
@@ -18,7 +18,7 @@
       </div>
       <div
         class="hero-utils prevent-flicker"
-        v-scroll-reveal="{ delay: 1000, origin: 'bottom', container: 'main' }"
+        v-scroll-reveal="{ delay: 700, origin: 'bottom', container: 'main' }"
       >
         <div class="hero-metrics">
           <div class="metric">
