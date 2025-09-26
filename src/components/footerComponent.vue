@@ -208,6 +208,14 @@ img {
   .footer-container {
     grid-template-columns: 1fr;
   }
+
+  .footer-signature {
+    flex-direction: column;
+
+    & .signature {
+      place-items: center !important;
+    }
+  }
 }
 
 .footer-signature {
