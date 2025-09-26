@@ -1,12 +1,18 @@
 <template>
   <section id="pacotes">
     <div class="container">
-      <div class="section-title">
+      <div
+        class="section-title"
+        v-scroll-reveal="{ delay: 400, origin: 'bottom', container: 'main' }"
+      >
         <h2 class="highlight">Planos e Preços</h2>
         <p>Investimento justo para uma educação musical de qualidade excepcional.</p>
         <div class="gift">🎁 Primeira aula gratuita para novos alunos!</div>
       </div>
-      <div class="section-container">
+      <div
+        class="section-container"
+        v-scroll-reveal="{ delay: 700, origin: 'bottom', container: 'main' }"
+      >
         <div class="card vertical">
           <div class="card-header">
             <div class="card-icon">
@@ -41,7 +47,10 @@
           <p>Economize até R$ 1.728</p>
         </div>
       </div>
-      <div class="card emphasis big">
+      <div
+        class="card emphasis big"
+        v-scroll-reveal="{ delay: 400, origin: 'bottom', container: 'main' }"
+      >
         <p class="card-title highlight">Condições Imperdíveis</p>
         <ul>
           <li>

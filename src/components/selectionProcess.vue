@@ -1,13 +1,19 @@
 <template>
   <section id="processo_seletivo">
     <div class="container">
-      <div class="section-title">
+      <div
+        class="section-title"
+        v-scroll-reveal="{ delay: 400, origin: 'bottom', container: 'main' }"
+      >
         <h2>
           Caminho da Excelência: <br />
           <span class="highlight">Processo Seletivo Lótus Music</span>
         </h2>
       </div>
-      <div class="section-container">
+      <div
+        class="section-container"
+        v-scroll-reveal="{ delay: 700, origin: 'bottom', container: 'main' }"
+      >
         <div class="requirements">
           <div class="title">
             <font-awesome-icon icon="fa-star" />

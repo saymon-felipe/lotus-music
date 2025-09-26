@@ -1,11 +1,17 @@
 <template>
   <section id="formats">
     <div class="container">
-      <div class="section-title">
+      <div
+        class="section-title"
+        v-scroll-reveal="{ delay: 400, origin: 'bottom', container: 'main' }"
+      >
         <h2>Formatos de Aula</h2>
         <p>Cada formato oferece vantagens únicas para seu aprendizado.</p>
       </div>
-      <div class="section-container">
+      <div
+        class="section-container"
+        v-scroll-reveal="{ delay: 700, origin: 'bottom', container: 'main' }"
+      >
         <div class="card vertical">
           <div class="card-header">
             <div class="card-icon">
